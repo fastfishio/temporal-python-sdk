@@ -45,7 +45,7 @@ async def activity_task_loop_func(worker: Worker):
                 return
             except Exception as ex:
                 logger.error("PollActivityTaskQueue error: %s", ex)
-                continue
+                raise
             # -----
             # if err:
             #     logger.error("PollActivityTaskQueue failed: %s", err)
